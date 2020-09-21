@@ -10,18 +10,18 @@
 
 name: Build OpenWrt
 
-on:
+# on:
   repository_dispatch:
   release:
     types: published
-  push:
+#  push:
     branches:
       - main
     paths:
       - '.config'
-  schedule:
+ # schedule:
     - cron: 0 8 * * 5
-  watch:
+ # watch:
     types: started
 
 env:
